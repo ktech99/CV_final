@@ -76,30 +76,32 @@
 				<h2 class="major">Results</h2>
 				<h4>Problem Setup</h4>
 				<p>
-					It should include a description of which components were from preexisting work (i.e. code from
-					github)
-					and which components were implemented for the project (i.e. new code, gathered dataset, etc).
+					The problem we were trying to solve was to identify pokemons using computer vision on different 
+					images. We used a turi create image classifier for this purpose. The model was pre trained for 
+					edge detection and other computer vision nuances. We used the model on a Kaggle dataset as well 
+					as a dataset we created by scraping the internet for images. We got varying accuracies that we 
+					have incldued in the table below.
 				</p>
 				<h4>Data Used</h4>
 				<p>
-					Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac.
-					Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer
-					sollicitudin mauris nec lorem luctus ultrices.
+					We used two datasets for this project and also ran the model on a combination of both the datasets.
+					For our first run we got a pre processed dataset on pokemons from Kaggle whcih comprised of 148 pokemons. 
+					Our second dataset comprised of images we collected by scraping the internet for the same 148 pokemons 
+					to see how the accuracy differs.
 				</p>
 				<h4>Techniques</h4>
 				<p>
-					Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac.
-					Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer
-					sollicitudin mauris nec lorem luctus ultrices.
+					We used a pre trained model called squeezenet from turi create which is a 18 layer convolutional neural 
+					network. It has been trained on over a million different images.
 				</p>
 				<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
 				<h4>Process</h4>
 				<p>
-					Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna
-					sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas
-					laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat
-					tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat
-					tempus.
+					We researched what pre trained model would work best with the image classification we intend to do and we 
+					settled on squeezenet from turi create. We then started researching for datasets and felt that the Kaggle 
+					dataset wasn't showing the complete picture and hence we decided to scrape our own data from the internet. 
+					For scraping we used an API we found online called google-images-download. We ran our model on the datasets 
+					and following are the results we obtained:
 				</p>
 				<h3 class="major">Results</h3>
 				<div class="table-wrapper">
@@ -115,17 +117,17 @@
 							<tr>
 								<td>Custom Dataset</td>
 								<td>Our dataset we created from fetching images</td>
-								<td>29.99%</td>
+								<td>55%</td>
 							</tr>
 							<tr>
 								<td>Kaggle Dataset</td>
 								<td>Dataset downloaded from Kaggle</td>
-								<td>89.57%</td>
+								<td>78%</td>
 							</tr>
 							<tr>
 								<td>Combination Dataset</td>
 								<td>A combination of Kaggle and our dataset</td>
-								<td>50.12%</td>
+								<td>71%</td>
 							</tr>
 						</tbody>
 					</table>
