@@ -76,31 +76,38 @@
 				<h2 class="major">Results</h2>
 				<h4>Problem Setup</h4>
 				<p>
-					The problem we were trying to solve was to identify pokemons using computer vision on different 
-					images. We used a turi create image classifier for this purpose. The model was pre trained for 
-					edge detection and other computer vision nuances. We used the model on a Kaggle dataset as well 
-					as a dataset we created by scraping the internet for images. We got varying accuracies that we 
+					The problem we were trying to solve was to identify pokemons using computer vision on different
+					images. We used a turi create image classifier for this purpose. The model was pre trained for
+					edge detection and other computer vision nuances. We used the model on a Kaggle dataset as well
+					as a dataset we created by scraping the internet for images. We got varying accuracies that we
 					have incldued in the table below.
 				</p>
 				<h4>Data Used</h4>
 				<p>
 					We used two datasets for this project and also ran the model on a combination of both the datasets.
-					For our first run we got a pre processed dataset on pokemons from Kaggle whcih comprised of 148 pokemons. 
-					Our second dataset comprised of images we collected by scraping the internet for the same 148 pokemons 
-					to see how the accuracy differs.
+					For our first run we got a pre processed dataset on pokemons from Kaggle whcih comprised of 148
+					pokemons.
+					Our second dataset comprised of images we collected by scraping the internet for the same 148
+					pokemons to see how the accuracy differs.
+					Both datasets had similar amounts of images for each Pokemon.
 				</p>
 				<h4>Techniques</h4>
 				<p>
-					We used a pre trained model called squeezenet from turi create which is a 18 layer convolutional neural 
+					We used a pre trained model called squeezenet from turi create which is a 18 layer convolutional
+					neural
 					network. It has been trained on over a million different images.
 				</p>
-				<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
+				<span class="image main"><img src="images/unknown.png" alt="training logs" /></span>
 				<h4>Process</h4>
 				<p>
-					We researched what pre trained model would work best with the image classification we intend to do and we 
-					settled on squeezenet from turi create. We then started researching for datasets and felt that the Kaggle 
-					dataset wasn't showing the complete picture and hence we decided to scrape our own data from the internet. 
-					For scraping we used an API we found online called google-images-download. We ran our model on the datasets 
+					We researched what pre trained model would work best with the image classification we intend to do
+					and we
+					settled on squeezenet from turi create. We then started researching for datasets and felt that the
+					Kaggle
+					dataset wasn't showing the complete picture and hence we decided to scrape our own data from the
+					internet.
+					For scraping we used an API we found online called google-images-download. We ran our model on the
+					datasets
 					and following are the results we obtained:
 				</p>
 				<h3 class="major">Results</h3>
@@ -132,6 +139,34 @@
 						</tbody>
 					</table>
 				</div>
+				<p>
+					As you can see, our custom dataset was significantly less accurate than the
+					Kaggle dataset. Looking back, our group believes this was because our
+					dataset had a large amount of variation in the types of images
+					selected such as Pokemon cards, stuff animals, and screenshots from
+					the TV series. By having this large variation of images, our
+					model was never very accurate at calisifying any one type of pokemon image.
+					In addtion to the large variation we had, we also spotted some outlier images
+					from the lack of being thorough in our data cleaning. This would also lead
+					to our dataset being dirty and the model performing worse.
+				</p>
+				<p>
+					Another lesson we learned was surrounding our "combination" dataset.
+					Our group had an assumption that more data is better when training a model
+					and, while that isn't necessarily false, more data in this case actually
+					hurt the model's accuracy. The combination dataset illustrated how taking
+					a good dataset and mixing it in with a poor dataset will make the model
+					worse. Our key takeaway from this test was the quality of a dataset is
+					as if not more important than quantity.
+				</p>
+				<p>
+					If we were to repeat this test to try and make our dataset perform
+					better than the Kaggle dataset, we would try two techniques: 1) Narrow
+					our scope for what we classify as a pokemon image during data cleaning. This means
+					instead of trying to build a model that classifies Pokemon from cards, tv, and
+					stuffed animals, we would only focus on collecting images from one niche. 2) Put
+					more effort cleaning our dataset to make sure no outlier images go through.
+				</p>
 			</article>
 
 			<!-- About -->
